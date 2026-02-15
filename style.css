@@ -1,0 +1,143 @@
+/* ===== تنظیمات کلی صفحه ===== */
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* font-family: sans-serif; */
+  direction: rtl;
+  text-align: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  color: #fdfdfd;
+}
+
+/* لایه‌ی نیمه‌شفاف روی پس‌زمینه برای خوانایی متن */
+.overlay {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.12), rgba(0,0,0,0.7));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+}
+
+/* ===== هدر ===== */
+.site-header h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #f5f5f5;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+/* ===== محتوای اصلی ===== */
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* کادر نمایش متن – شبیه کارت خوشنویسی */
+.quote-card {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  padding: 2rem 1.5rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(14px);
+}
+
+/* متن داخل کارت – اینجا فونت نستعلیق رو می‌تونی ست کنی */
+#quote-text {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #fffaf3;
+  text-shadow: 0 0 6px rgba(0,0,0,0.6);
+  /* اگر فونت نستعلیق اضافه کردی: */
+  /* font-family: 'IranNastaliq', 'Tahoma', cursive; */
+}
+
+/* ===== دکمه‌ها ===== */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.controls button {
+  cursor: pointer;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.8rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.3s ease;
+}
+
+/* دکمه متن تصادفی */
+#random-quote-btn {
+  background: linear-gradient(135deg, #f88a9b, #feb67e);
+  color: #3b2b2b;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+#random-quote-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.45);
+}
+
+/* کنترل‌های موزیک */
+.music-controls {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.music-controls button {
+  background: rgba(0, 0, 0, 0.45);
+  color: #fdfdfd;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.music-controls button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.5);
+}
+
+/* ===== فوتر ===== */
+.site-footer {
+  font-size: 0.9rem;
+  color: #f0e6dd;
+  opacity: 0.9;
+}
+
+
+/* ===== ریسپانسیو ساده ===== */
+@media (max-width: 600px) {
+  .quote-card {
+    padding: 1.5rem 1.2rem;
+  }
+
+  #quote-text {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+
+  .music-controls {
+    flex-direction: column;
+  }
+
+  .controls button {
+    width: 100%;
+    max-width: 260px;
+  }
+}

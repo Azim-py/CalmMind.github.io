@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <title>گوشه‌ی آرامش</title>
+
+        <!-- فونت؛ اینجا هر فونت نستعلیق دلخواهت رو می‌تونی جایگزین کنی -->
+        <!-- مثلا اگر فونت IranNastaliq رو داری، می‌تونی با @font-face در CSS اضافه‌اش کنی -->
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="overlay">
+            <header class="site-header">
+                <h1>گوشه‌ی آرامش</h1>
+            </header>
+
+            <main class="content">
+                <section class="quote-card">
+                    <div id="quote-text">
+                        برای شروع، روی دکمه‌ی «نمایش متن تصادفی» کلیک کن.
+                    </div>
+                </section>
+
+                <div class="controls">
+                    <button id="random-quote-btn">نمایش متن تصادفی</button>
+
+                    <div class="music-controls">
+                        <button id="toggle-mute-btn">🔊 صدا روشن</button>
+                        <button id="next-track-btn">⏭ موزیک بعدی</button>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="site-footer">
+                <span>لحظه‌ای برای خودت...</span>
+            </footer>
+        </div>
+
+        <!-- پلیر موزیک (پنهان) -->
+        <audio id="bg-music" preload="auto"></audio>
+
+        <script src="script.js"></script>
+    </body>
+</html>
